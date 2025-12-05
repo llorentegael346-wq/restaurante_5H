@@ -1,0 +1,151 @@
+ /* ====== ESTILO GENERAL ====== */
+body { 
+    font-family: Arial, sans-serif; 
+    background: #f4f4f4; 
+    margin: 0; 
+    padding: 0; 
+}
+
+/* ====== CONTENEDOR ====== */
+.container { 
+    width: 90%; 
+    max-width: 1000px; 
+    margin: 40px auto; 
+    background: #fff; 
+    padding: 30px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px #aaa; 
+    position: relative; 
+}
+
+/* ====== TÍTULOS ====== */
+h1 { 
+    color: #0f0b0a; /* 🔹 Negro */
+    text-align: center; 
+}
+h2 { 
+    color: #0f0b0a; 
+    margin-top: 40px; 
+}
+
+/* ====== TABLA ====== */
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 20px; 
+    word-wrap: break-word;
+}
+table, th, td { 
+    border: 1px solid #db9e05; /* 🔹 Borde dorado */
+}
+th, td { 
+    padding: 10px; 
+    text-align: center; 
+    vertical-align: middle; 
+}
+th { 
+    background: #0f0b0a; /* 🔹 Fondo negro */
+    color: #db9e05;      /* 🔹 Texto dorado */
+}
+td { 
+    background: #fafafa; 
+}
+
+/* ====== BOTONES ====== */
+.btn { 
+    padding: 8px 12px; 
+    border-radius: 5px; 
+    color: #fff; 
+    text-decoration: none; 
+    font-weight: bold;
+    border: 2px solid #db9e05;
+    transition: all 0.2s ease;
+}
+
+/* ====== LIBERAR ====== */
+.btn-liberar { 
+    background: #0f0b0a; 
+    color: #fff;
+}
+.btn-liberar:hover { 
+    background: #db9e05; 
+    color: #0f0b0a;
+}
+
+/* ====== BOTÓN REGRESAR ====== */
+.btn-back { 
+    display: block; 
+    width: 200px; 
+    margin: 30px auto 0; 
+    text-align: center; 
+    background: #0f0b0a; 
+    padding: 10px; 
+    border-radius: 5px; 
+    color: #db9e05; 
+    text-decoration: none; 
+    border: 2px solid #db9e05;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.btn-back:hover { 
+    background: #db9e05; 
+    color: #0f0b0a; 
+}
+
+/* ====== BOTÓN DE SALIR ====== */
+.logout { 
+    position: absolute; 
+    top: 20px; 
+    right: 30px; 
+}
+.logout a { 
+    background: #0f0b0a; 
+    color: #db9e05; 
+    padding: 8px 12px; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    border: 2px solid #db9e05;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+.logout a:hover { 
+    background: #db9e05; 
+    color: #0f0b0a; 
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+    .container { 
+        padding: 15px; 
+        width: 95%; 
+    }
+    table { 
+        font-size: 14px; 
+    }
+    th, td { 
+        padding: 8px; 
+    }
+    h1 { 
+        font-size: 22px; 
+    }
+    h2 { 
+        font-size: 18px; 
+    }
+}
+.totales-mesas {
+    margin-top: 30px;
+    padding: 15px;
+    background: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+}
+
+.totales-mesas h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.totales-mesas p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}

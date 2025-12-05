@@ -1,0 +1,366 @@
+/* ======= ESTILO GENERAL ======= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+}
+
+/* ======= NAVBAR ======= */
+.navbar {
+    width: 100%;
+    background: #000000;
+    overflow: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 16px 36px;
+    color: #f5f1f1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.2s;
+}
+
+.navbar a.active,
+.navbar a:hover {
+    background: #030303;
+}
+
+/* ======= PLATILLOS ======= */
+.plato {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    min-height: 140px;
+    flex-wrap: wrap;
+}
+
+.plato-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #bbb;
+}
+
+.plato-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.nombre { 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+
+.descripcion { 
+    color: #666; 
+    font-size: 15px; 
+}
+
+.precio { 
+    color: #db9e05; 
+    font-size: 18px; 
+    font-weight: bold; 
+    float: right; 
+}
+
+/* ======= BOTONES ======= */
+.pedido-btn {
+    background: #db9e05;
+    color: #fff;
+    border: none;
+    padding: 7px 16px;
+    border-radius: 5px;
+    margin-top: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pedido-btn:hover {
+    background: #f08604;
+}
+
+/* ======= FORMULARIO ======= */
+.formulario { 
+    margin-top: 10px; 
+}
+
+label { 
+    font-size: 14px; 
+}
+
+input[type="number"] { 
+    width: 60px; 
+    padding: 5px;
+}
+
+input[type="text"] { 
+    width: 200px; 
+    padding: 6px;
+}
+
+/* ======= MODAL ======= */
+.modal { 
+    display: none; 
+    position: fixed; 
+    z-index: 10; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content { 
+    background: #fff; 
+    margin: 10% auto; 
+    padding: 20px; 
+    border-radius: 8px; 
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 2px 8px #333; 
+    position: relative;
+}
+
+.close { 
+    color: #c0392b; 
+    position: absolute; 
+    top: 8px; 
+    right: 18px; 
+    font-size: 24px; 
+    font-weight: bold; 
+    cursor: pointer;
+}
+
+/* ======= CARRITO ======= */
+.container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #000000; /* 🔹 Dorado como los menús */
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* ======= TABLA DEL CARRITO ======= */
+.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.tabla-carrito th {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+.tabla-carrito td {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabla-carrito tr:hover {
+    background-color: #fff7e6; /* 🔹 Ligero tono dorado claro */
+}
+
+/* ======= INPUT CANTIDAD ======= */
+.tabla-carrito input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+/* ======= BOTONES ======= */
+button {
+    background-color: #db9e05; /* 🔹 Dorado base */
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background-color: #f08604; /* 🔹 Naranja hover */
+    transform: scale(1.03);
+}
+
+button[name="actualizar"] {
+    background-color: #f08604;
+}
+
+button[name="actualizar"]:hover {
+    background-color: #db9e05;
+}
+
+button[name="vaciar"] {
+    background-color: #7f8c8d;
+}
+
+button[name="vaciar"]:hover {
+    background-color: #707b7c;
+}
+
+button[name="finalizar"] {
+    background-color: #27ae60;
+}
+
+button[name="finalizar"]:hover {
+    background-color: #229954;
+}
+
+/* ======= BOTÓN ELIMINAR ======= */
+.btn-eliminar {
+    background: none;
+    border: none;
+    color: #f08604; /* 🔹 Naranja */
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    color: #db9e05; /* 🔹 Dorado */
+    transform: scale(1.3);
+}
+
+/* ======= SECCIÓN DE ACCIONES ======= */
+.acciones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.tabla-resumen {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabla-resumen th, .tabla-resumen td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.confirmar {
+    background-color: #db9e05;
+    color: #fff;
+}
+
+.cancelar {
+    background-color: #f08604;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 768px) {
+    .navbar a {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+
+    .plato {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .plato-img {
+        margin-bottom: 10px;
+    }
+
+    .precio {
+        float: none;
+        margin-top: 5px;
+    }
+
+    .tabla-carrito th, .tabla-carrito td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .navbar a {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .plato-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+    }
+
+    .pedido-btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+.mensaje-exito {
+    background-color: #db9e05; /* dorado */
+    color: #0f0b0a;            /* negro */
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    animation: aparecer 0.6s ease-out;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

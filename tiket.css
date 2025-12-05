@@ -1,0 +1,123 @@
+/* ===== Diseño base ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.ticket {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.ticket h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.ticket p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* ===== Tabla ===== */
+.tabla-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+th, td {
+    padding: 6px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #fafafa;
+    font-weight: bold;
+}
+
+/* ===== Total ===== */
+h3 {
+    margin: 15px 0;
+    color: #111;
+}
+
+/* ===== Botones ===== */
+.acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button, .btn-volver {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover, .btn-volver:hover {
+    background: #0056b3;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .ticket {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+}
+
+/* ===== Modo impresión ===== */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .ticket {
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        max-width: none;
+    }
+
+    .acciones {
+        display: none;
+    }
+}
